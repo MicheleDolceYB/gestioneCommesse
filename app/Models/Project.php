@@ -9,6 +9,10 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id';
+
+    protected $fillable = ['commesse_id','link','description'];
+
     public function commesse()
     {
         return $this->belongsTo(Commesse::class);

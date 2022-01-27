@@ -9,6 +9,10 @@ class Stima extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id';
+
+    protected $fillable = ['dependent_id','activity_id','stima'];
+
     public function activity()
     {
         return $this->belongsTo(Activity::class);

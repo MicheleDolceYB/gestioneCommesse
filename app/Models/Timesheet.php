@@ -9,6 +9,10 @@ class Timesheet extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id';
+
+    protected $fillable = ['dependent_id','activity_id','data','ore'];
+
     public function dependent()
     {
         return $this->belongsTo(Dependent::class);

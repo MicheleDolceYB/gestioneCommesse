@@ -9,6 +9,10 @@ class Commesse extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id';
+
+    protected $fillable = ['client_id','stato','link','description'];
+
     public function client()
     {
         return $this->belongsTo(Client::class);

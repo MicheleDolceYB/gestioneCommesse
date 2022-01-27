@@ -9,6 +9,10 @@ class Dependent extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'id';
+
+    protected $fillable = ['name','surname','email'];
+
     public function dependent_activity()
     {
         return $this->belongsToMany(Dependent_Activity::class);
